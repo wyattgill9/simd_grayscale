@@ -11,7 +11,7 @@ fn convert_to_grayscale_simd(path: &str) -> Vec<u8> {
     let rgb_img = img.to_rgb8();
 
     let r_factor = f32x8::splat(0.299);
-    let b_factor = f32x8::splat(0.587);
+    let b_factor = f32x8::splat(0.587);;
     let g_factor = f32x8::splat(0.114);
 
     let mut grayscale_data = vec![0u8; (width * height) as usize];
